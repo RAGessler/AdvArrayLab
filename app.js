@@ -210,20 +210,50 @@ let chickpeaDishes = problemFive()
 console.log('Dishes that contain chickpea:', chickpeaDishes)
 // complete
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
+//Map
 let dishTypes = dishes.map(function(element){
     return element.cuisine
 })
 console.log('The cusine types are:', dishTypes)
 //Complete
-//Map
+
 // BONUS: (come back to this after finishing all)
 //6b. Use the filter method to eliminate duplicates, leaving only distinct values in the array
 
 //7. Create a function that will append the cuisine type to the start of the dish's name. Ie, "Italian Pizza"
 //Map 
-
+function problemSeven(){
+    let result = dishes.map(function(element){
+        return element.cuisine + element.name
+    })
+    return result
+}
+let dishTypeAndName = problemSeven()
+console.log(dishTypeAndName)
+//Complete
 //8. Create a function that will append the cuisine type to the start of the dish's name. Then, return only the Vegetarian dish objects. So this function should return objects 11-13 with their names changed to "Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"
 //Map, Filter
+function problemEight(){
+    let result = dishes.map(function(element){
+        return element.cuisine + ' ' + element.name
+    })
+    return result
+}
+dishTypeAndName = problemEight()
+// console.log(dishTypeAndName)
+function problemEightTwo(){
+    let result = dishTypeAndName.filter(function(element){
+        if (element.includes('Vegetarian')){
+            return true;
+        }
+        else{
+            return false;
+        }})
+        return result
+}
+let vegetarianDishes = problemEightTwo()
+console.log(vegetarianDishes)
+//Complete
 
 
 //BONUS
