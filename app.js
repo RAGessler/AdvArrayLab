@@ -219,7 +219,10 @@ console.log('The cusine types are:', dishTypes)
 
 // BONUS: (come back to this after finishing all)
 //6b. Use the filter method to eliminate duplicates, leaving only distinct values in the array
-
+function removeDuplicates(dishTypes){
+    return dishTypes.filter((element,index) => dishTypes.indexOf(element) === index);
+}
+console.log(removeDuplicates(dishTypes))
 //7. Create a function that will append the cuisine type to the start of the dish's name. Ie, "Italian Pizza"
 //Map 
 function problemSeven(){
