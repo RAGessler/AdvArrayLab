@@ -258,12 +258,40 @@ console.log(vegetarianDishes)
 
 //BONUS
 
-//5. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
+//9. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
-
+function problemNine(){
+    let result = dishes.filter(function(element){
+        if (element.ingredients.includes('tomato') || element.ingredients.includes('cheese')){
+            return true;
+        }
+        else{
+            return false;
+        }})
+        return result
+}
+let containsTomatoOrCheese = problemNine()
+console.log(containsTomatoOrCheese)
 //10. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
-
+function probalmTen(){
+    let result = dishes.map(function(element){
+        return element.servings
+    })
+    return result
+}
+servingList = probalmTen()
+console.log(servingList)
+function problemTenTwo(servingList){
+    let result = servingList.reduce(function(total, element){
+        return total + element
+    })
+    return result
+}
+let totalServings = problemTenTwo(servingList)
+console.log('Total servings of all dishes:', totalServings)
+//complete?
+//Hold
 //11. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
 
