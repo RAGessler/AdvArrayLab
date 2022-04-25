@@ -160,11 +160,24 @@ function problemTwo(){
 let bigItalianFood = problemTwo();
 console.log('Italian food with 5+ servings:', bigItalianFood)
 // Complete
-``
+
 
 //3. Create a function that will return only dishes whose serving id number matches their serving count.
 //Filter
 
+function problemThree(){
+    let results = dishes.filter(function(element){
+        if (element.servings === element.id){
+            return true;
+        }
+        else{
+            return false
+        }})
+        return results
+}
+let idServings = problemThree();
+console.log('Dishes that have a serving size equal to their ID:', idServings)
+//Completed`
 //4. Create a function that will return only dishes whose serving count is even.
 //Filter
 
