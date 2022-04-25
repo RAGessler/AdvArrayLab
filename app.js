@@ -193,11 +193,22 @@ function problemFour(){
 let evenDishServings = problemFour()
 console.log('Dishes with an even number of servings:', evenDishServings)
 //complete
-``
 //5. Create a function that will return dishes whose ingredients array INCLUDES "chickpea".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
-
+function problemFive(){
+    let results = dishes.filter(function(element){
+        if (element.ingredients.includes('chickpea')){
+            return true;
+        }
+        else{
+            return false;
+        }})
+return results
+}
+let chickpeaDishes = problemFive()
+console.log('Dishes that contain chickpea:', chickpeaDishes)
+// complete`
 //6a. Create a function that will return an array of only the names of the cuisine types. Ie ['Italian', 'Mexican', ...]
 //Map
 // BONUS: (come back to this after finishing all)
